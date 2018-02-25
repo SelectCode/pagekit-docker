@@ -8,7 +8,6 @@ RUN apt-get update && \
     ca-certificates \
     php5 php5-fpm php5-cli php5-json php5-mysql php5-curl
 
-ENV PAGEKIT_VERSION 1.0.2
 RUN mkdir /pagekit
 WORKDIR /pagekit
 VOLUME ["/pagekit/storage", "/pagekit/app/cache"]
