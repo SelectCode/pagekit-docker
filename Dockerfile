@@ -12,7 +12,7 @@ RUN mkdir /pagekit
 WORKDIR /pagekit
 VOLUME ["/pagekit/storage", "/pagekit/app/cache"]
 
-RUN wget https://www.pagekit.com/download -O /pagekit/pagekit.zip && \
+RUN https://github.com/pagekit/pagekit/releases/download/1.0.13/pagekit-1.0.13.zip -O /pagekit/pagekit.zip && \
     unzip /pagekit/pagekit.zip && rm /pagekit/pagekit.zip
 
 ADD nginx.conf /etc/nginx/nginx.conf
